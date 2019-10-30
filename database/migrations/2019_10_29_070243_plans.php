@@ -17,11 +17,11 @@ class Plans extends Migration
             $table->bigIncrements('id');
             $table->text('title');
             $table->integer('categori_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories');
+            // $table->foreign('categori_id')->references('id')->on('categories');
             $table->text('contents');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->unique(['user_id', 'category_id'],'uq_roles');
+            // $table->foreign('user_id')->references('id')->on('users');
+            // $table->unique(['user_id', 'category_id'],'uq_roles');
             $table->rememberToken();
             $table->timestamp('created_at')->nullable();
         });
