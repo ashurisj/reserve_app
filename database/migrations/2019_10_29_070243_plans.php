@@ -21,6 +21,7 @@ class Plans extends Migration
             $table->text('contents');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->unique(['user_id', 'category_id'],'uq_roles');
             $table->rememberToken();
             $table->timestamp('created_at')->nullable();
         });

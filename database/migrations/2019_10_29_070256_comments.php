@@ -18,6 +18,7 @@ class Comments extends Migration
             $table->text('text');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('plan_id')->references('id')->on('plans');
+            $table->unique(['user_id', 'plan_id'],'uq_roles');
             $table->rememberToken();
             $table->timestamp('created_at')->nullable();
         });
