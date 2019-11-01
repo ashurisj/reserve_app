@@ -11,9 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/index', function () {
-    return view('index');
-});
+Auth::routes(['verify' => true]);
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::resource('users', 'AuthController');
+
+Route::prefix('');
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/index', function () {
+//     return view('index');
+// });
