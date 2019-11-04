@@ -5,6 +5,7 @@
   <title>Reserve</title>
 </head>
 <body>
-  <h1>Hellow World!</h1>
+  <h1>スケジュール</h1>
+    
 </body>
 </html>

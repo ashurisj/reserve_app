@@ -18,8 +18,9 @@ class UserTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'admin',
             'email' => 'admin@example.com',
-            'password' => bcrypt('1234'),
             'email_verified_at' => $faker->dateTime(),
+            'password' => bcrypt('1234'),
+            'remember_token' => $faker->dateTime(),
             'created_at' => $faker->dateTime(),
             'update_at' => $faker->dateTime(),
         ]);
