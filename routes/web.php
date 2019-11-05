@@ -11,18 +11,23 @@
 |
 */
 
-Auth::routes(['verify' => true]);
+// Auth::routes(['verify' => true]);
 
-Route::get('/', 'HomeController@index')->name('home');
+// Route::get('/', 'HomeController@index')->name('home');
 
-Route::resource('users', 'AuthController');
+// Route::resource('users', 'AuthController');
 
-Route::prefix('');
+// Route::prefix('');
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/index', function () {
-//     return view('index');
-// });
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/new', function () {
+    return view('new');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
