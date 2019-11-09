@@ -19,6 +19,9 @@
 
 // Route::prefix('');
 
+Route::resource('/user', 'UserController');
+Route::resource('/plan', 'PlanController');
+Route::resource('/comment', 'CommentController');
 
 Route::get('/', function () {
     return view('index');
