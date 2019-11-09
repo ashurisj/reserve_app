@@ -16,7 +16,7 @@ class Plans extends Migration
         Schema::create('plans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('title');
-            $table->integer('categori_id')->unsigned();
+            $table->integer('category_id')->unsigned();
             // $table->foreign('categori_id')->references('id')->on('categories');
             $table->text('contents');
             $table->integer('user_id')->unsigned();
