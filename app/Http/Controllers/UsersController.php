@@ -13,7 +13,9 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = App\Models\User::find(1);
+
+        return view('index')->with('users',$users);
     }
 
     /**
